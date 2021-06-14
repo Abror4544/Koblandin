@@ -323,12 +323,9 @@
 
 .header .headerRight .poligon img {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 492px;
-  height: 542px;
-  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  top: -75px;
+  width: auto;
+  max-width: 100%;
 }
 
 .topestContent {
@@ -549,6 +546,25 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.close {
+  padding: 15px 35px;
+  font-family: Mplus1p;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  background: #000000;
+  -webkit-box-shadow: 0px 12px 24px #00000099;
+  box-shadow: 0px 12px 24px #00000099;
+  border-radius: 2px;
+  display: inline-block;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
 .main_btn:hover {
   -webkit-box-shadow: 0px 12px 32px rgba(252, 54, 152, 0.55);
   box-shadow: 0px 12px 32px rgba(252, 54, 152, 0.55);
@@ -710,7 +726,11 @@ input[type="submit"] {
   line-height: 22px;
   text-align: center;
   color: #000000;
+  margin-bottom: 30px;
   display: none;
+}
+.successMsg.active {
+  display: block !important;
 }
 
 .formWrapper.consult form {
@@ -835,7 +855,6 @@ section.two {
   background: #fafafa;
   position: relative;
   padding: 34px 0 100px 0;
-  overflow-x: clip;
 }
 
 section.two .p1 {
@@ -1085,10 +1104,6 @@ section.two .swiper-pagination-bullet {
 
 section.two .swiper-pagination-bullet-active {
   background: #764f96;
-}
-
-section.two .swiper-container {
-  overflow: visible;
 }
 
 section.three {
@@ -1646,7 +1661,7 @@ section.six .name {
 
 footer {
   background: #764f96;
-  
+
   overflow: hidden;
 }
 
@@ -1772,7 +1787,7 @@ footer svg {
   height: 386px;
 }
 
-.mapBlock img {
+.mapBlock iframe {
   object-fit: cover;
   height: 100%;
   width: 124%;
@@ -2270,7 +2285,7 @@ footer .bottom .text {
   .header {
     overflow: inherit;
   }
-  section.two{
+  section.two {
     padding: 34px 0 50px 0;
   }
   .addressWrap {
@@ -2587,18 +2602,17 @@ footer .bottom .text {
 
 @media (max-width: 720px) {
   .container {
-    max-width: 438px !important;
+    max-width: 98% !important;
   }
 
   .mapBlock {
     overflow: visible;
   }
 
-  .mapBlock img {
+  .mapBlock iframe {
     width: 124%;
     margin-left: -12%;
   }
-
 }
 
 @media screen and (max-width: 607px) {
@@ -2731,9 +2745,6 @@ footer .bottom .text {
 }
 
 @media (max-width: 438px) {
-  .container {
-    max-width: 288px !important;
-  }
 
   footer .a {
     flex-wrap: wrap;
