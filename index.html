@@ -185,38 +185,40 @@
     </header>
     <div class="formWrapper callOrder">
         <div class="form">
-            <form>
+            <form action="" method="POST" id="form_call">
                 <h2 class="formTitle">Заказать звонок</h2>
-                <button class="closeForm">
+                <div class="closeForm">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M13.7046 15.6062C14.2297 16.1312 15.0811 16.1312 15.6062 15.6062C16.1313 15.0811 16.1313 14.2297 15.6062 13.7046L9.90156 8L15.6062 2.29539C16.1313 1.77029 16.1313 0.918946 15.6062 0.39385C15.0811 -0.131246 14.2297 -0.131246 13.7046 0.39385L8.00001 6.09846L2.29537 0.393822C1.77027 -0.131274 0.918921 -0.131274 0.393824 0.393822C-0.131273 0.918918 -0.131273 1.77027 0.393824 2.29536L6.09847 8L0.393823 13.7046C-0.131274 14.2297 -0.131274 15.0811 0.393823 15.6062C0.91892 16.1313 1.77027 16.1313 2.29537 15.6062L8.00001 9.90154L13.7046 15.6062Z"
                             fill="white" />
                     </svg>
-                </button>
+                </div>
                 <input class="input" type="text" name="name" placeholder="Имя*" required>
                 <input class="input" type="tel" name="tel" placeholder="Телефон" required>
                 <p class="successMsg">В ближайшее время с вами свяжется наш консультант</p>
                 <input id="btn" type="submit" class="main_btn" value="Отправить">
+                <div class="close">Закрыть</div>
             </form>
         </div>
     </div>
 
     <div class="formWrapper consult">
         <div class="form">
-            <form>
+            <form action="" method="POST" id="form_consult">
                 <h2 class="formTitle">Получить консультацию</h2>
-                <button class="closeForm">
+                <div class="closeForm">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M13.7046 15.6062C14.2297 16.1312 15.0811 16.1312 15.6062 15.6062C16.1313 15.0811 16.1313 14.2297 15.6062 13.7046L9.90156 8L15.6062 2.29539C16.1313 1.77029 16.1313 0.918946 15.6062 0.39385C15.0811 -0.131246 14.2297 -0.131246 13.7046 0.39385L8.00001 6.09846L2.29537 0.393822C1.77027 -0.131274 0.918921 -0.131274 0.393824 0.393822C-0.131273 0.918918 -0.131273 1.77027 0.393824 2.29536L6.09847 8L0.393823 13.7046C-0.131274 14.2297 -0.131274 15.0811 0.393823 15.6062C0.91892 16.1313 1.77027 16.1313 2.29537 15.6062L8.00001 9.90154L13.7046 15.6062Z"
                             fill="white" />
                     </svg>
-                </button>
-                <input class="input" type="text" placeholder="Имя*" required>
-                <input class="input" type="tel" placeholder="Телефон" required>
+                </div>
+                <input class="input" type="text" name="name" placeholder="Имя*" required>
+                <input class="input" type="tel" name="tel" placeholder="Телефон" required>
                 <p class="successMsg">В ближайшее время с вами свяжется наш консультант</p>
                 <input type="submit" class="main_btn" value="Отправить">
+                <div class="close">Закрыть</div>
             </form>
         </div>
     </div>
@@ -960,9 +962,15 @@
                                 </div>
                             </div>
                             <div class="soc-icons">
-                                <img src="images/footerinstagram.svg" alt="">
-                                <img src="images/footerfacebook.svg" alt="">
-                                <img src="images/footeryoutube.svg" alt="">
+                                <a href="#/">
+                                    <img src="images/footerinstagram.svg" alt="">
+                                </a>
+                                <a href="#/">
+                                    <img src="images/footerfacebook.svg" alt="">
+                                </a>
+                                <a href="#/">
+                                    <img src="images/footeryoutube.svg" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="right">
@@ -976,7 +984,7 @@
                                     <p class="city">г.Алматы</p>
                                     <a class="tel" href="tel: 77757053333">+7 775 705 33 33</a>
                                     <p class="address">ул.Маркова,75, уг.Аль-Фараби</p>
-                                    <a class="gomap" href="#/">Смотреть на карте</a>
+                                    <a class="gomap almaty" href="#/">Смотреть на карте</a>
                                 </div>
                                 <div class="addressBlock">
                                     <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
@@ -986,14 +994,16 @@
                                     <p class="city">г.Нур-Султан</p>
                                     <a class="tel" href="tel: 77757053333">+7 708 705 33 33</a>
                                     <p class="address">ул. Бухар-Жырау, 20В, 201НП</p>
-                                    <a class="gomap" href="#/">Смотреть на карте</a>
+                                    <a class="gomap nursultan" href="#/">Смотреть на карте</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 b">
                         <div class="mapBlock">
-                            <img src="images/map.png" alt="">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.5565625588447!2d73.07826461512755!3d49.813203840956625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424346d75b67509d%3A0xf94180a1fa0351fb!2zMjAx0J3Qnywg0L_RgNC-0YHQvy4g0JHRg9GF0LDRgC3QltGL0YDQsNGDIDIwLCDQmtCw0YDQsNCz0LDQvdC00LAgMTAwMDAwLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2s!4v1623664656056!5m2!1sru!2s"
+                                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -1014,8 +1024,11 @@
     </footer>
 
     <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/consult.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
